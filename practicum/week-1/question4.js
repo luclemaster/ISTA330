@@ -27,4 +27,3 @@ var howManyCommon = function(A, B)
     }
     return count;
 };
-console.log(howManyCommon('gtY', 'iTygrtg'));

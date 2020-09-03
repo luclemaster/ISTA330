@@ -24,4 +24,3 @@ var numberOfOrderedPairs = function(input)
     }
     return oPcount;
 };
-console.log(numberOfOrderedPairs([4, 2, 6, 9]))
