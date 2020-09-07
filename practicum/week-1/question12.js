@@ -21,15 +21,16 @@ var maxBalanceNumber = function(input) {
     if (input[i] == "a") {
       if (input[i + 1] == "b") {
         output += 1;
-        i += 2
+        i += 1
       }
     }
     if (input[i] == "b") {
       if (input[i + 1] == "a") {
         output += 1;
-        i += 2
+        i += 1
       }
     }
+    i += 1
   }
   return output;
 };
