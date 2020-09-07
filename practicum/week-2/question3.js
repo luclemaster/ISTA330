@@ -13,7 +13,6 @@ output: [
 */
 
 var PascalTriangle = function(n) {
-  /*
   let output = [];
   for (i = 1; i <= n; i++) {
     let addition = [];
@@ -27,5 +26,5 @@ var PascalTriangle = function(n) {
     }
     output.push(addition);
   }
-  */
+  return output;
 };
