@@ -6,7 +6,11 @@ For example given the input array [5, 6, 1], the running sum is
 */
 
 var runningSum = function(input) {
-   /* Test */
-   let sum = 0
-   
+   let sum = 0;
+   let result = [];
+   for i = 0; i < input; i++) {
+      sum += input[i];
+      result.push(sum);
+   }
+   return result;
 };
