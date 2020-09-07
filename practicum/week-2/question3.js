@@ -16,6 +16,7 @@ var PascalTriangle = function(n) {
   let output = [];
   for (i = 1; i <= n; i++) {
     let addition = [];
+    /*
     for (x = 1; x <= i; x++) {
       if ((x = 1) || (x = i)) {
         addition.push(1);
@@ -25,6 +26,7 @@ var PascalTriangle = function(n) {
       }
     }
     output.push(addition);
+    */
   }
   return output;
 };
