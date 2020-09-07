@@ -19,7 +19,7 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
         }
         for (i = 0; i < cookies.length; i++) {
                 if (cookies[i] < max) {
-                        needed += cookies[i];
+                        needed += (max - cookies[i]);
                 }
         }
         if (needed <= extraCookies) {
