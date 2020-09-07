@@ -14,11 +14,11 @@ var maxSumOfMins = function(input) {
        let sum = 0;
        while (input.length >= 2) {
               let largest = 0;
-              let remove = 0
+              let remove = 0;
               for (i = 0; i < input.length; i++) {
                      if (input[i] > largest){
                             largest = input[i];
-                            remove = i
+                            remove = i;
                      }
               }
               let largest = 0;
@@ -26,7 +26,7 @@ var maxSumOfMins = function(input) {
               for (i = 0; i < input.length; i++) {
                      if (input[i] > largest){
                             largest = input[i];
-                            remove = i
+                            remove = i;
                      }
               }
               sum += largest;
