@@ -6,7 +6,6 @@ output: 3
 */
 
 var median = function(input) {
-    //Middle + middle / 2
     let median = 0
     let size = input.length;
     if (size % 2 != 0) {
