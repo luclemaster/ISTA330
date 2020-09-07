@@ -12,7 +12,7 @@ output: 4
 
 var maxSumOfMins = function(input) {
        let sum = 0;
-       while (input.length > 0) {
+       while (input.length >= 2) {
               let largest = 0;
               let remove = 0
               for (i = 0; i < input.length; i++) {
