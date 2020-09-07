@@ -13,7 +13,7 @@ var suffleString = function(input, shuffleIndices) {
     for (i = 0; i < input.length; i++) {
         for (x = 0; x < input.length; x++) {
             if (shuffleIndices[x] == i) {
-                output = output.concat(input[x]);
+                output += input[x];
             }
         }
     }
