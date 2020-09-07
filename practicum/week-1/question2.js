@@ -22,7 +22,7 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
                         needed += (max - cookies[i]);
                 }
         }
-        if (needed <= extraCookies) {
+        if (needed == extraCookies) {
                 return true;
         }
         return false;
