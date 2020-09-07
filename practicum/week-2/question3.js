@@ -13,5 +13,17 @@ output: [
 */
 
 var PascalTriangle = function(n) {
-
+  let output = [];
+  for (i = 1; i <= n; i++) {
+    let addition = [];
+    for (x = 1; x <= i; x++) {
+      if ((x = 1) || (x = i)) {
+        addition.push(1);
+      }
+      else {
+        addition.push(output[i-1][x-1] + output [i-1][x+1]);
+      }
+    }
+    output.push(addition);
+  }
 };
