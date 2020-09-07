@@ -22,7 +22,7 @@ var PascalTriangle = function(n) {
         addition.push(1);
       }
       if ((x != 1) && (x != i)) {
-        let sum = last_line[x];
+        let sum = last_line[x] + 1;
         addition.push(sum);
       }
     }
