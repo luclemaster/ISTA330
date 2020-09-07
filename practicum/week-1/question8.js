@@ -17,7 +17,7 @@ var biggerAndEven = function(input) {
                 total += 1;
             }
         }
-        list.push(total);
+        output.push(total);
     }
-    return list;
+    return output;
 };
