@@ -11,6 +11,7 @@ var median = function(input) {
     let size = input.length;
     if (size % 2 != 0) {
         median = input[(size + 1) / 2];
+        return median;
     }
     median = (input[(size / 2) - 1] + input[size / 2]) / 2;
     return median;
