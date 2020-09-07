@@ -19,7 +19,7 @@ var largestNumberIsAtLeastTwice = function(input) {
                 }
         }
         for (i = 0; i < input.length; i++) {
-                if ((i != max_index) && ((input[i] * 2) != max)) {
+                if ((i != max_index) && ((input[i] * 2) > max)) {
                         return false;
                 }
         }
