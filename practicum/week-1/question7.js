@@ -11,5 +11,6 @@ output: 4
 */
 
 var maxSumOfMins = function(input) {
-
+/* Find biggest and second biggest, pop and pair */
+/* store pairs in an array */
 };
