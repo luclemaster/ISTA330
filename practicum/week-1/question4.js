@@ -11,5 +11,6 @@ The letters in A are guaranteed distinct, and all characters in A and B are lett
 */
 
 var howManyCommon = function(A, B) {
+    /* double nested for loop */
 
 };

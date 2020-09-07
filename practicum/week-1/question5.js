@@ -12,6 +12,26 @@ output: 3
 */
 
 var minimalReduction = function(n) {
+    /* variable counter and modulus */
+    let count = 0;
+    
+    if (n % 4 == 0)
+    {
+
+    }
+
+    if (n % 3 == 0)
+    {
+
+    }
+
+    if (n - 1 == 0)
+    {
+
+    }
+
+
+
 
 };
 

@@ -9,5 +9,6 @@ output: 'hello'
 */
 
 var suffleString = function(input, shuffleIndices) {
+/* Duplicate input */
 
 };

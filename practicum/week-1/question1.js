@@ -6,5 +6,10 @@ For example given the input array [5, 6, 1], the running sum is
 */
 
 var runningSum = function(input) {
+<<<<<<< Updated upstream
+=======
+   /* Test */
+   let sum = 0
+>>>>>>> Stashed changes
    
 };
