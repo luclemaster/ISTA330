@@ -14,24 +14,20 @@ output: 3
 var minimalReduction = function(n) {
     /* variable counter and modulus */
     let count = 0;
-    
-    if (n % 4 == 0)
-    {
-
+    while (n != 0) {
+        if (n % 4 == 0 && n != 0) {
+            n /= 4;
+            count += 1
+        }
+        if (n % 3 == 0 && n != 0) {
+            n /= 3;
+            count += 1
+        }
+        if (n % 4 != 0 && n % 3 != 0 && n != 0){
+            n -= 1;
+            count += 1
+        }
     }
-
-    if (n % 3 == 0)
-    {
-
-    }
-
-    if (n - 1 == 0)
-    {
-
-    }
-
-
-
-
+    return count;
 };
 

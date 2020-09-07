@@ -26,4 +26,4 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
                 return true;
         }
         return false;
- }
+ };

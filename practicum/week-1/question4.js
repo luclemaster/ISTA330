@@ -21,5 +21,4 @@ var howManyCommon = function(A, B) {
         }
     }
     return total;
-    /* double nested for loop */
 };
