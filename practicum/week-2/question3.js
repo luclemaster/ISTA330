@@ -27,7 +27,7 @@ var PascalTriangle = function(n) {
       }
     }
     output.push(addition);
-    last_line = addition.slice();
+    last_line = [...addition];
   }
   return output;
 };
