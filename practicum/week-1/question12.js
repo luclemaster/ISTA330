@@ -18,11 +18,9 @@ var maxBalanceNumber = function(input) {
   let i = 0;
   let output = 0;
   while (i < (input.length - 1)) {
-    if (input[i] == "a") {
-      if (input[i + 1] == "b") {
-        output += 1;
-        i += 1
-      }
+    if ((input[i] == "a") && (input[i + 1] == "b")) {
+      output += 1;
+      i += 1
     }
     i += 1
   }
