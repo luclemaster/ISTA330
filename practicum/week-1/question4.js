@@ -14,8 +14,8 @@ var howManyCommon = function(A, B) {
     let total = 0;
     for (i = 0; i < A.length; i++) {
         let current = A[i];
-        for (j = 0; i < B.length; i++) {
-            if (current == B[j]) {
+        for (j = 0; j < B.length; j++) {
+            if (A[i] == B[j]) {
                 total += 1;
             }
         }
