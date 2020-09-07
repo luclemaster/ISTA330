@@ -11,10 +11,10 @@ output: 4
 */
 
 var maxSumOfMins = function(input) {
-       /*
        let sum = 0;
+       let largest = 0;
        while (input.length >= 2) {
-              let largest = 0;
+              largest = 0;
               let remove = 0;
               for (i = 0; i < input.length; i++) {
                      if (input[i] > largest){
@@ -22,7 +22,7 @@ var maxSumOfMins = function(input) {
                             remove = i;
                      }
               }
-              let largest = 0;
+              largest = 0;
               input.splice(remove,1);
               for (i = 0; i < input.length; i++) {
                      if (input[i] > largest){
@@ -34,7 +34,4 @@ var maxSumOfMins = function(input) {
               input.splice(remove,1);
        }
        return sum;
-       */
-/* Find biggest and second biggest, pop and pair */
-/* store pairs in an array */
 };
