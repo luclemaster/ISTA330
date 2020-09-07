@@ -8,7 +8,7 @@ output: 3
 var median = function(input) {
     //Middle + middle / 2
     if (input.length % 2 != 0) {
-        return input[(input.length) / 2];
+        return input[(input.length / 2) + 1];
     }
     let median = (input[(input.length / 2) - 1] + input[input.length / 2]) / 2;
     return median;
