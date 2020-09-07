@@ -20,11 +20,13 @@ var PascalTriangle = function(n) {
       if ((x == 1) || (x == i)) {
         addition.push(1);
       }
+      /*
       if ((x != 1) && (x != i)) {
         // let sum = output[i-2][x-2] + output[i-2][x];
         let sum = 0;
         addition.push(sum);
       }
+      */
     }
     output.push(addition);
   }
