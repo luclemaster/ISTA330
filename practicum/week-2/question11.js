@@ -14,5 +14,18 @@ output: 1
 */
 
 var d_count = function(input1, input2, d) {
-
+    let count = 0
+    for (i = 0; i < input1.length; i++){
+        let check = true
+        let current = input1[i]
+        for (j = 0; j < input2.length; j++){
+            if ((current - input2[j] < 6) && (current - input2[j] > -6)){
+                check = false
+            }
+        }
+        if (check == true){
+            count += 1
+        }
+    }
+    return count
 };

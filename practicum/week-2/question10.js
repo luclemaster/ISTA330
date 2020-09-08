@@ -18,6 +18,7 @@ output: [[-5, -4], [23, 24]]
 var minPairs = function(input) {
     let pairs = []
     let output = []
+    // Picks out pairs in order with a < b
     for (i = 0; i < input.length; i++){
         let current = input[i]
         for (x = 0; x < input.length; x++){
@@ -26,6 +27,7 @@ var minPairs = function(input) {
             }
         }
     }
+    // Finds the minimum difference between pairs
     let min = pairs[0][1] - pairs[0][0]
     for (i = 1; i < pairs.length; i++){
         let current = pairs[i]
@@ -33,6 +35,7 @@ var minPairs = function(input) {
             min = current[1] - current[0]
         }
     }
+    // Pushes minimally different pairs to output
     for (i = 1; i < pairs.length; i++){
         let current = pairs[i]
         if ((current[1] - current[0]) == min){
