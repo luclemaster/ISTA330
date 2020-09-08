@@ -6,5 +6,15 @@ output: 3
 */
 
 var median = function(input) {
-
+    /*
+    if (input.length % 2 == 1)
+    {
+        return input[Math.floor(sortList.length / 2)];
+    }
+    else 
+    {
+        return (input[(input.length / 2)] + input[(input.length / 2) - 1]) / 2;
+    }
+    */
+    
 };

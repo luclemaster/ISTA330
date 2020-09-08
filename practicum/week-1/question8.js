@@ -8,5 +8,19 @@ output: [1, 0, 1, 2]
 */
 
 var biggerAndEven = function(input) {
-
+    var largerArray = [];
+    let i;
+    for (i = 0; i < input.length; i++)
+    {
+        largerArray[i] =0;
+        let j;
+        for (j = 0; j < input.length; j++)
+        {
+            if(i != j && input[j] > input[i] && input[j] % 2 == 0)
+            {
+                largerArray[i]++;
+            }
+        }
+    }
+    return largerArray;
 };
