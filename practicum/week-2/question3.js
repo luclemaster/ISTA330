@@ -13,25 +13,20 @@ output: [
 */
 
 var PascalTriangle = function(n) {
-  let output = [];
-  let last_line = [];
-  for (i = 0; i < n; i++) {
-    let addition = [];
-
-    for (x = 0; x <= i; x++) {
-      if ((x == 0) || (x == i)) {
-        addition.push(1);
+  let output = [[1],[1,1]]
+  let last_line = []
+  if (n > 2) {
+    for (i = 2; i < n; i++) {
+      let addition = [1]
+      let prev = output[output.length - 1]
+      for (x = 0; x < prev.length - 1; x++) {
+        let sum = (prev[x+1] + prev[x])
+        addition.push(sum)
+        // Something is going wrong here, but I have no clue what
       }
-      if ((x > 0) && (x < i) && (i > 1)) {
-        let sum = last_line[x-1] + last_line[x];
-        addition.push(sum);
-      }
+      addition.push(1)
+      output.push(addition)
     }
-    last_line = [];
-    for (a = 0; a < addition; a++) {
-      last_line.push(addition[a]);
-    }
-    output.push(addition);
   }
   return output;
 };
