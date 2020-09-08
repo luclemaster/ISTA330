@@ -27,7 +27,7 @@ var m_element = function(input) {
     {
         if(pair[e] > Math.floor(input.length / 2))
         {
-            return e.toString();
+            return parseInt(e);
         }
     }
     return -1;
