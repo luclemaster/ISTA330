@@ -12,6 +12,7 @@ output: 3
 */
 
 var minimalReduction = function(n) {
+<<<<<<< Updated upstream
     var count = 0;
     while(n > 0)
     {
@@ -32,3 +33,10 @@ var minimalReduction = function(n) {
     console.log('hi');
     return count;
 };
+=======
+
+};
+
+console.log('hi'); 
+ 
+>>>>>>> Stashed changes
