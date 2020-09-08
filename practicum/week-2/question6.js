@@ -25,4 +25,5 @@ var m_element = function(input) {
             return current
         }
     }
+    return -1
 };
