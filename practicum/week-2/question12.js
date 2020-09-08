@@ -12,14 +12,16 @@ var F = function(n) {
     if (n = 0){
         return 0
     }
-    let nums = [0,1,0]
     if (n == 1 || n == 2){
         return 1
     }
+    let nums = [0,1,0]
     for (i = n; i >= 0; i--){
-        nums[0] = nums[1]
-        nums[1] = nums[1] + nums[2]
-        nums[2] = nums[0]
+        nums[0] = 0
+        nums[0] += nums[1]
+        nums[1] = 0
+        nums[1] += nums[2]
+        nums[2] = nums[1] + nums[2]
     }
     return nums[2]
 };
