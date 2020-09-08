@@ -16,10 +16,10 @@ var F = function(n) {
     if (n == 1 || n == 2){
         return 1
     }
-    for (i = 0; i <= n; i++){
+    for (i = n; i >= 0; i--){
         nums[0] = nums[1]
-        nums[1] += nums[2]
+        nums[1] = nums[1] + nums[2]
         nums[2] = nums[0]
     }
-    return nums[1]
+    return nums[2]
 };
