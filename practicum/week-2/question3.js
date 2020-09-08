@@ -14,20 +14,22 @@ output: [
 
 var PascalTriangle = function(n) {
   let output = [];
-  let last_line = [];
   for (i = 1; i <= n; i++) {
     let addition = [];
     for (x = 1; x <= i; x++) {
       if ((x == 1) || (x == i)) {
         addition.push(1);
       }
-      if ((x != 1) && (x != i) && (i > 2)) {
+      if ((x > 1) && (x < i) && (i > 2)) {
         let sum = last_line[x-1] + last_line[x];
         addition.push(sum);
       }
     }
     output.push(addition);
-    last_line = [...addition];
+    let last_line = [];
+    for (let x of addition) {
+      last_line.push(x)
+    }
   }
   return output;
 };
