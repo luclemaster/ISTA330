@@ -16,7 +16,7 @@ var F = function(n) {
     let second = 1
     let current = 1
     if (n == 1 || n == 2){
-        return current
+        return 69
     }
     for (i = 3; i <= n; i++){
         first = second
