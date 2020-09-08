@@ -8,18 +8,18 @@ output: 7 - 2 = 5
 */
 
 var maxMinusMin = function(n) {
-    digits = ("" + n).split("");
+    digits = ("" + n).split("")
     /* Adding the integer to a string turns it into a string so that I
     can split it into a workable array. */
-    let max = 0;
-    let min = 9;
+    let max = 0
+    let min = 9
     for (i = 0; i < digits.length; i++) {
         if (digits[i] > max) {
-            max = digits[i];
+            max = digits[i]
         }
         if (digits[i] < min) {
-            min = digits[i];
+            min = digits[i]
         }
     }
-    return (max - min);
+    return (max - min)
 };

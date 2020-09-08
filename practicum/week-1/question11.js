@@ -10,19 +10,19 @@ output: [5, 5, 2, 2, 2, 2]
 */
 
 var decode = function(input) {
-    let output = [];
-    let repeat = 0;
-    let num = 0;
+    let output = []
+    let repeat = 0
+    let num = 0
     for (i = 0; i < input.length; i++) {
         if (i % 2 == 0) {
-            repeat = input[i];
+            repeat = input[i]
         }
         if (i % 2 != 0) {
-            num = input[i];
+            num = input[i]
             for (x = 0; x < repeat; x++) {
-                output.push(num);
+                output.push(num)
             }
         }
     }
-    return output;
+    return output
 };

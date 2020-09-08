@@ -8,16 +8,16 @@ output: [1, 0, 1, 2]
 */
 
 var biggerAndEven = function(input) {
-    let output = [];
+    let output = []
     for (i = 0; i < input.length; i++) {
-        let current = input[i];
-        let total = 0;
+        let current = input[i]
+        let total = 0
         for (j = 0; j < input.length; j++) {
             if ((input[j] > current) && (input[j] % 2 == 0)){
-                total += 1;
+                total += 1
             }
         }
-        output.push(total);
+        output.push(total)
     }
-    return output;
+    return output
 };
