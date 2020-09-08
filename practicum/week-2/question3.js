@@ -22,7 +22,6 @@ var PascalTriangle = function(n) {
       for (x = 0; x < prev.length - 1; x++) {
         let sum = (prev[x+1] + prev[x])
         addition.push(sum)
-        // Something is going wrong here, but I have no clue what
       }
       addition.push(1)
       output.push(addition)
