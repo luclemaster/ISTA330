@@ -14,6 +14,7 @@ output: [
 
 var PascalTriangle = function(n) {
   let output = [];
+  let last_line = [];
   for (i = 0; i < n; i++) {
     let addition = [];
 
@@ -26,12 +27,10 @@ var PascalTriangle = function(n) {
         addition.push(sum);
       }
     }
-
-    let last_line = [];
+    last_line = [];
     for (a = 0; a < addition; a++) {
       last_line.push(addition[a]);
     }
-    
     output.push(addition);
   }
   return output;
