@@ -21,8 +21,8 @@ var PascalTriangle = function(n) {
       if ((x == 1) || (x == i)) {
         addition.push(1);
       }
-      if ((x != 1) && (x != i)) {
-        let sum = last_line[x] + 1;
+      if ((x != 1) && (x != i) && (i > 2)) {
+        let sum = last_line[x-1] + last_line[x];
         addition.push(sum);
       }
     }
