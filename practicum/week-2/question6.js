@@ -30,5 +30,6 @@ var m_element = function(input) {
             return e;
         }
     }
+    return -1;
 };
 console.log(m_element([1, 2, 2, 3, 2, 7, 2]));
