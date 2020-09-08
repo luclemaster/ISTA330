@@ -21,5 +21,5 @@ var F = function(n) {
         nums[1] = nums[2]
         nums[2] = nums[0] + nums[1]
     }
-    return current
+    return nums[2]
 };
