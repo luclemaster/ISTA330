@@ -16,8 +16,8 @@ var F = function(n) {
         return 1
     }
     let nums = [0,1]
-    for (i = 1; i < n; i++){
-        nums.push(nums[i-1] + nums[i-0])
+    for (i = 2; i <= n; i++){
+        nums.push(nums[i-2] + nums[i-1])
     }
-    return nums[n-1]
+    return nums[n]
 };
