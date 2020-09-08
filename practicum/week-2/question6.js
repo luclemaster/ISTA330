@@ -12,5 +12,17 @@ output: 2
 */
 
 var m_element = function(input) {
-
+    let check = (input.length / 2)
+    for (i = 0; i < input.length; i++) {
+        let number = 0
+        let current = input[i]
+        for (x = 0; x < input.length; x++) {
+            if (input[x] == current) {
+                number += 1
+            }
+        }
+        if (number > check) {
+            return current
+        }
+    }
 };
