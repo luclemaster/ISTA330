@@ -14,7 +14,7 @@ var decode = function(input) {
     {
         for(let t = 0; t < input[i]; t++)
         {
-            decodedList += [input[i + 1]];
+            decodedList.push(input[i + 1]);
         }
     }
     return decodedList;
