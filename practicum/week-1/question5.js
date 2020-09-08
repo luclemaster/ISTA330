@@ -29,5 +29,6 @@ var minimalReduction = function(n) {
         }
         count++;
     }        
+    console.log('hi');
     return count;
 };
