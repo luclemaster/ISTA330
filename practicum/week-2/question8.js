@@ -22,7 +22,7 @@ var d_integer = function(input) {
                 number += 1
             }
         }
-        if (number = current) {
+        if (number == current) {
             outputs.push(current)
         }
     }
