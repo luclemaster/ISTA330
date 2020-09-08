@@ -13,5 +13,8 @@ so there are two groups with the largest size.
 */
 
 var largestGroupsCount = function(n) {
-
+    if (n % 9 != 0){
+        return n % 9
+    }
+    return 9
 };
