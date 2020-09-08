@@ -25,11 +25,11 @@ var PascalTriangle = function(n) {
         addition.push(sum);
       }
     }
-    output.push(addition);
     let last_line = [];
-    for (let x of addition) {
-      last_line.push(x)
+    for (i = 0; i < addition; i++) {
+      last_line.push(addition[i]);
     }
+    output.push(addition);
   }
   return output;
 };
