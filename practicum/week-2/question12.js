@@ -23,5 +23,5 @@ var F = function(n) {
         second = current
         current = first + second
     }
-    return 42
+    return current
 };
