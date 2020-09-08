@@ -15,13 +15,9 @@ var F = function(n) {
     if (n == 1 || n == 2){
         return 1
     }
-    let nums = [0,1,0]
-    for (i = n; i >= 0; i--){
-        nums[0] = 0
-        nums[0] += nums[1]
-        nums[1] = 0
-        nums[1] += nums[2]
-        nums[2] = nums[1] + nums[2]
+    let nums = [0,1]
+    for (i = 1; i < n; i++){
+        nums.push(nums[i-1] + nums[i-0])
     }
-    return nums[2]
+    return nums[n-1]
 };
