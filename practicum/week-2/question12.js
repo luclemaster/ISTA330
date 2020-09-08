@@ -9,5 +9,18 @@ Given n, calculate F(n).
 */
 
 var F = function(n) {
-
+    if (n = 0){
+        return 0
+    }
+    let first = 0
+    let second = 1
+    let current = 1
+    if (n == 1 || n == 2){
+        return current
+    }
+    for (i = 3; i <= n; i++){
+        first, second = second, current
+        current = first + second
+    }
+    return current
 };
