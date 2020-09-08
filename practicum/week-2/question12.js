@@ -19,7 +19,8 @@ var F = function(n) {
         return current
     }
     for (i = 3; i <= n; i++){
-        first, second = second, current
+        first = second
+        second = current
         current = first + second
     }
     return current
