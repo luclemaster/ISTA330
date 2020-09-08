@@ -12,5 +12,23 @@ output: 2
 */
 
 var m_element = function(input) {
-
+    var pair = {};
+    for (let i = 0; i < input.length; i++){
+        if(input[i] in pair)
+        {
+            pair[input[i]]++;
+        }
+        else
+        {
+            pair[input[i]] = 1;
+        }
+    }
+    for (let e in pair)
+    {
+        if(pair[e] > Math.floor(input.length / 2))
+        {
+            return e;
+        }
+    }
 };
+console.log(m_element([1, 2, 2, 3, 2, 7, 2]));
