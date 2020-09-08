@@ -15,7 +15,6 @@ var minimalReduction = function(n) {
     let count = 0
     while (n != 0) {
         if (n % 4 == 0 && n != 0) {
-            console.log('hi');
             n /= 4
             count += 1
         }
