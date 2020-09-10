@@ -9,5 +9,21 @@ output: true
 */
 
 var kStepAway = function(input, k) {
-
+    let kCount = 0;
+    let foundOne = false;
+    for(let i = 0; i < input.length; i++)
+    {
+        if (foundOne && kCount < k && input[i] == 1)
+        {
+            return false;
+        }
+        else if(input[i] == 1)
+        {
+            foundOne = true;
+            kCount = 0;
+        }
+        kCount++;
+        return true;
+    }
 };
+console.log(kStepAway([1,0,0,0,1,0,0,1], 2));
