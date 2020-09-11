@@ -13,5 +13,14 @@ so there are two groups with the largest size.
 */
 
 var largestGroupsCount = function(n) {
+    var countList = [];
+    for(let i = 1; i <= n; i++)
+    {
+        countList.push([i]);
+    }
+    var largestDigit
+    for (let i = 10; i < countList.length; i++)
+    {
 
+    }
 };
