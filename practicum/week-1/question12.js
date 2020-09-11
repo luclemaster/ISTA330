@@ -24,7 +24,7 @@ var maxBalanceNumber = function(input) {
     {
       aCount++;
     }
-    else if(input[i] == 'b' && aCount == 1)
+    else if(input[i] == 'b' && aCount >= 1)
     {
       balanceCount++;
       aCount = 0;
@@ -37,3 +37,4 @@ var maxBalanceNumber = function(input) {
   return balanceCount;
 };
 console.log(maxBalanceNumber('abaabbabab'));
+console.log(maxBalanceNumber('aaababbb'))
