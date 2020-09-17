@@ -32,4 +32,3 @@ var powerSet = function(input) {
   }
   return powerList;
 };
-//console.log(powerSet([1,2,3]))

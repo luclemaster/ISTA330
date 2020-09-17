@@ -25,5 +25,18 @@ output:  4
 */
 
 var longestNested = function(A) {
-
+     var nestedList = [];
+     let missingDuplicates = true;
+     var currentNum = 0;
+     while(true)
+     {
+          currentNum = A[currentNum];
+          if (currentNum in nestedList)
+          {
+               continue;
+          }
+          nestedList.push(currentNum);
+     }
+     return nestedList.length;
 };
+console.log([4,3,2,0,1]);
