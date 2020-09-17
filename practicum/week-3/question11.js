@@ -35,5 +35,22 @@ output: 4
 */
 
 var romanToInteger = function(s) {
-
+    totalNum = 0;
+    var conversions = {'I': 1, 'IV' : 4, 'V' : 5, 'IX' : 9, 'X' : 10, 'LX' : 40, 'L': 50, 'XC' : 90,
+         'X' :100, 'CD' : 400, 'D': 500, 'CM': 900, 'M' : 1000}
+    while(s.length > 0)
+    {
+        if (s.slice(0,2) in conversions)
+        {
+            totalNum += conversions[s.slice(0,2)];
+            s = s.slice(2, s.length);
+        }
+        else 
+        {
+            totalNum += conversions[s[0]];
+            s = s.slice(1, s.length);
+        }
+    }
+    return totalNum;
 };
+console.log(romanToInteger("MCMXCIV"));

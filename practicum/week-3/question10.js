@@ -11,5 +11,6 @@ output: true
 */
 
 var isPalindrome = function(s) {
-
+    s = s.replace(/\s/g, '');
+    
 };
