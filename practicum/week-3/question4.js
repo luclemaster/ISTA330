@@ -19,5 +19,14 @@ Example:
 */
 
 var powerSet = function(input) {
+  var powerList = []
+  for (let i = 0; i < input.length * input.length; i++)
+  {
+    let curList = []
+    for(let j = 0; j < input.length; j++)
+    {
+      
+    }
 
+  }
 };
