@@ -13,18 +13,21 @@ output: [
 */
 
 var PascalTriangle = function(n) {
-  var triangle = [];
-  while(triangle.length <= n)
+  var triangle = [1];
+  if (n == 1)
   {
-    triangle.push(1);
-    for (let i = 1; i < triangle.length; i++)
+    return triangle;
+  }
+  for (let i = 1; i < n; i++)
+  {
+    let tmpList = [1];
+    for (let j = 1; j < triangle[i-1].length; j++)
     {
-      triangle[i] += triangle[i-1];
+      tmpList[j] = triangle[i-1][j-1] + triangle[i-1][j];
     }
-    
-    console.log(triangle);
-    console.log(triangle.length);
+    tmpList.push(1);
+    triangle.push(tmpList);
   }
   return triangle;
 };
-console.log(PascalTriangle(4));
+console.log(PascalTriangle(6)[5])

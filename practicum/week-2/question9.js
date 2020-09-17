@@ -19,8 +19,8 @@ var largestGroupsCount = function(n) {
         countList.push([i]);
     }
     var largestDigit
-    for (let i = 10; i < countList.length; i++)
+    for (let i = 0; i < countList.length; i++)
     {
-
+        
     }
 };
