@@ -53,4 +53,3 @@ var romanToInteger = function(s) {
     }
     return totalNum;
 };
-console.log(romanToInteger("MCMXCIV"));

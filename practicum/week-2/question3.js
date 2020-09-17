@@ -30,4 +30,3 @@ var PascalTriangle = function(n) {
   }
   return triangle;
 };
-console.log(PascalTriangle(6)[5])

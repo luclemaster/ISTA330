@@ -11,5 +11,51 @@ Example:
 */
 
 var isCrossing = function(s) {
-
+    var movement = [0, 0];
+    var totalMovement = [[0,0]];
+    for (let i = 0; i < s.length; i++)
+    {
+        //console.log(s[i])
+        if(s[i] == 'N')
+        {
+            movement[1]++;
+        }
+        else if(s[i] == 'S')
+        {
+            movement[1]--;
+        }
+        else if(s[i] == 'E')
+        {
+            movement[0]++;
+        }
+        else if(s[i] == 'W')
+        {
+            movement[0]--;
+        }
+        console.log(movement);
+        totalMovement.push(movement);
+        
+        
+    }
+    for(let i = 0; i < totalMovement.length; i++)
+    {
+        console.log(totalMovement[i]);
+    }
+    //console.log(totalMovement);
+    for(let i = 0; i < totalMovement.length; i++)
+    {
+        for(let j = 0; j < totalMovement.length; j++)
+        {
+            if(i != j && totalMovement[i] == totalMovement[j])
+            {
+                //console.log(i);
+                //console.log(j);
+                //console.log(totalMovement[i]);
+                //console.log(totalMovement[j]);
+                return true;
+            }
+        }
+    }
+    return false;
 };
+console.log(isCrossing("NESSESW"));
