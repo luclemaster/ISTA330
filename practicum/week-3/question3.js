@@ -13,7 +13,7 @@ var kStepAway = function(input, k) {
     let foundOne = false;
     for(let i = 0; i < input.length; i++)
     {
-        if (foundOne && kCount < k && input[i] == 1)
+        if (foundOne && kCount <= k && input[i] == 1)
         {
             return false;
         }
@@ -23,7 +23,8 @@ var kStepAway = function(input, k) {
             kCount = 0;
         }
         kCount++;
-        return true;
+        
     }
+    return true;
 };
-console.log(kStepAway([1,0,0,0,1,0,0,1], 2));
+console.log(kStepAway([1,0,0,0,1,0,0,1],2));
