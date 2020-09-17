@@ -28,7 +28,7 @@ var longestNested = function(A) {
      var nestedList = [];
      let missingDuplicates = true;
      var currentNum = 0;
-     /*
+     
      while(missingDuplicates)
      {
           currentNum = A[currentNum]; 
@@ -39,5 +39,5 @@ var longestNested = function(A) {
           nestedList.push(currentNum);
      }
      return nestedList.length;
-     */
+     
 };
