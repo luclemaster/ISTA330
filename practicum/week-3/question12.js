@@ -11,7 +11,7 @@ Example:
 */
 
 var isCrossing = function(s) {
-    var movement = [0, 0];
+    var movement = [0,0];
     var totalMovement = [[0,0]];
     for (let i = 0; i < s.length; i++)
     {
@@ -32,30 +32,17 @@ var isCrossing = function(s) {
         {
             movement[0]--;
         }
-        console.log(movement);
-        totalMovement.push(movement);
-        
-        
+        totalMovement.push(movement.slice());
     }
-    for(let i = 0; i < totalMovement.length; i++)
-    {
-        console.log(totalMovement[i]);
-    }
-    //console.log(totalMovement);
     for(let i = 0; i < totalMovement.length; i++)
     {
         for(let j = 0; j < totalMovement.length; j++)
         {
-            if(i != j && totalMovement[i] == totalMovement[j])
+            if(i != j && (totalMovement[i] == totalMovement[j]))
             {
-                //console.log(i);
-                //console.log(j);
-                //console.log(totalMovement[i]);
-                //console.log(totalMovement[j]);
                 return true;
             }
         }
     }
     return false;
 };
-console.log(isCrossing("NESSESW"));
