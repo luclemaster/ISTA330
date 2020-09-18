@@ -11,34 +11,29 @@ Example:
 */
 
 var isCrossing = function(s) {
-    var movement = [0,0];
+    var movement = [0, 0];
     var totalMovement = [[0,0]];
     for (let i = 0; i < s.length; i++)
     {
-        //console.log(s[i])
-        if(s[i] == 'N')
-        {
-            movement[1]++;
-        }
-        else if(s[i] == 'S')
-        {
-            movement[1]--;
-        }
-        else if(s[i] == 'E')
-        {
-            movement[0]++;
-        }
-        else if(s[i] == 'W')
-        {
-            movement[0]--;
-        }
-        totalMovement.push(movement.slice());
+        if(s[i] == 'N'){movement[1]++;}
+        else if(s[i] == 'S'){movement[1]--;}
+        else if(s[i] == 'E'){movement[0]++;}
+        else if(s[i] == 'W'){movement[0]--;}
+        totalMovement.push(Array.from(movement));
     }
     for(let i = 0; i < totalMovement.length; i++)
     {
         for(let j = 0; j < totalMovement.length; j++)
         {
-            if(i != j && (totalMovement[i] == totalMovement[j]))
+            let equalLists = true;
+            for(let x = 0; x < 2; x++)
+            {
+                if (totalMovement[i][x] != totalMovement[j][x])
+                {
+                    equalLists = false
+                }
+            }
+            if(i != j && equalLists)
             {
                 return true;
             }
