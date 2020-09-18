@@ -11,11 +11,10 @@ output: true
 */
 
 var isPalindrome = function(s) {
-    s = s.replace(/[\w_]/g, '');
-    s = s.toLowerCase();
-    for(let i = 0; i < s.length / 2; i++)
+    cleanStr = s.toLowerCase().replace(/[\W_]/g, '');
+    for(let i = 0; i < cleanStr.length / 2; i++)
     {
-        if (s[i] != s[s.length - 1 - i])
+        if (cleanStr[i] != cleanStr[cleanStr.length - 1 - i])
         {
             return false;
         }
