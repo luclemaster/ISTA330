@@ -13,19 +13,27 @@ output: 3
 */
 
 var d_integer = function(input) {
-    for(let i = 0; i < input.length; i++)
-    {
-        let count = 0;
-        for(let j = 0; j < input.length; j++)
-        {
-            if(input[j] == input[i])
-            {
-                count++;
+    let outputs = []
+    for (i = 0; i < input.length; i++) {
+        let number = 0
+        let current = input[i]
+        for (x = 0; x < input.length; x++) {
+            if (input[x] == current) {
+                number += 1
             }
         }
-        if(count == input[i]){
-            return count;
+        if (number == current) {
+            outputs.push(current)
         }
     }
-    return -1;
+    if (outputs.length > 0) {
+        let max = 0
+        for (i = 0; i < outputs.length; i++) {
+            if (outputs[i] > max) {
+                max = outputs[i]
+            }
+        }
+        return max
+    }
+    return -1
 };

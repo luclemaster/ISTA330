@@ -7,19 +7,17 @@ F(n) = F(n - 1) + F(n - 2), for n > 1.
 
 Given n, calculate F(n).
 */
-var fibSum = 0;
-var F = function(n) {
 
-    if(n == 0)
-    {
-        return 0;
+var F = function(n) {
+    if (n == 0){
+        return 0
     }
-    else if(n == 1)
-    {
+    if (n == 1 || n == 2){
         return 1
     }
-    if (n > 1)
-    {
-        return F(n - 1) + F(n - 2);
+    let nums = [0,1]
+    for (i = 2; i < n+1; i++){
+        nums.push(nums[i - 2] + nums[i - 1])
     }
+    return nums[n]
 };

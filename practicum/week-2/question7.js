@@ -12,17 +12,13 @@ output: [[1,4], [2,5], [3,6]]
 */
 
 var transpose = function(M) {
-    transposedMatrix = [[]];
-    for (let j = 0; j < M[0].length; j++)
-    {
-        //transposedMatrix[j] = [];
-        let tmpList = [];
-        for (let i = 0; i < M.length; i++)
-        { 
-            tmpList[i] = M[i][j];
-            //transposedMatrix[j,i] = M[i][j];
+    let output = []
+    for (column = 0; column < M[0].length; column++) {
+        let current = []
+        for (row = 0; row < M.length; row++) {
+            current.push(M[row][column])
         }
-        transposedMatrix[j] = tmpList;
+        output.push(current)
     }
-    return transposedMatrix;
+    return output
 };

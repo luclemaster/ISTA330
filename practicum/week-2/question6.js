@@ -4,7 +4,7 @@ find the m-element.
 The m-element is 
 the element that appears more than ⌊ n/2 ⌋ times.
 
-If the majority element does not exist return undefined.
+If the majority element does not exist return -1.
 
 Example: 
 input: [1, 2, 2, 3, 2, 7, 2]
@@ -12,24 +12,18 @@ output: 2
 */
 
 var m_element = function(input) {
-    var pair = {};
-    for (let i = 0; i < input.length; i++){
-        if(input[i] in pair)
-        {
-            pair[input[i]]++;
+    let check = (input.length / 2)
+    for (i = 0; i < input.length; i++) {
+        let number = 0
+        let current = input[i]
+        for (x = 0; x < input.length; x++) {
+            if (input[x] == current) {
+                number += 1
+            }
         }
-        else
-        {
-            pair[input[i]] = 1;
-        }
-    }
-    for (let e in pair)
-    {
-        if(pair[e] > Math.floor(input.length / 2))
-        {
-            return parseInt(e);
+        if (number > check) {
+            return current
         }
     }
-    return -1;
+    return -1
 };
-console.log(m_element([1, 2, 2, 3, 2, 7, 2]));

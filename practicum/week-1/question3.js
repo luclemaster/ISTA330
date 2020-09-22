@@ -8,19 +8,15 @@ output: 5
 There are 5 ordered pairs: (4, 6), (4, 9), (2, 6), (2, 9), (6, 9)
 */
 
-var numberOfOrderedPairs = function(input) 
-{
-    var oPcount = 0
-    let i;
-    for(i = 0; i < input.length; i++)
-    {
-        let j;
-        for(j = i; j < input.length; j++)
-        {
-            if (input[i] < input[j]){
-                oPcount++;
+var numberOfOrderedPairs = function(input) {
+    let result = 0
+    for (i = 0; i < input.length; i++) {
+        let current = input[i]
+        for (j = i; j < input.length; j++) {
+            if (current < input[j]) {
+                result += 1
             }
         }
     }
-    return oPcount;
+    return result
 };

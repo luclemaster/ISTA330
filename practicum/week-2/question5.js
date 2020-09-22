@@ -17,18 +17,15 @@ output: true
 */
 
 var isMonotonic = function(input) {
-    let isIncrasing = input[0] < input[1];
-    for (let i = 2; i < input.length; i ++)
-    {
-        if (isIncrasing && input[i-1] > input[i])
-        {
-            return false;
+    let increasing = true
+    let decreasing = true
+    for (i = 1; i < input.length; i++){
+        if (input[i] > input[i-1]) {
+            decreasing = false
         }
-        else if(input[i-1] < input[i])
-        {
-            return false;
+        if (input[i] < input[i-1]) {
+            increasing = false
         }
     }
-    return true;
+    return increasing || decreasing
 };
-console.log('hi');

@@ -13,20 +13,19 @@ output: [
 */
 
 var PascalTriangle = function(n) {
-  var triangle = [1];
-  if (n == 1)
-  {
-    return triangle;
-  }
-  for (let i = 1; i < n; i++)
-  {
-    let tmpList = [1];
-    for (let j = 1; j < triangle[i-1].length; j++)
-    {
-      tmpList[j] = triangle[i-1][j-1] + triangle[i-1][j];
+  let output = [[1],[1,1]]
+  let last_line = []
+  if (n > 2) {
+    for (i = 2; i < n; i++) {
+      let addition = [1]
+      let prev = output[output.length - 1]
+      for (x = 0; x < prev.length - 1; x++) {
+        let sum = (prev[x+1] + prev[x])
+        addition.push(sum)
+      }
+      addition.push(1)
+      output.push(addition)
     }
-    tmpList.push(1);
-    triangle.push(tmpList);
   }
-  return triangle;
+  return output;
 };

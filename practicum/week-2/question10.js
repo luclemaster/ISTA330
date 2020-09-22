@@ -16,25 +16,31 @@ output: [[-5, -4], [23, 24]]
 */
 
 var minPairs = function(input) {
-    var diffPairs = [];
-    let minDiff = 10^5;
-    for (let i = 0; i < input.length; i++)
-    {
-        for(let j = 0; j < input.length; j++)
-        {
-            if(input[i] < input[j])
-            {
-                if(input[j] - input[i] < minDiff)
-                {
-                    diffPairs = [[input[i],input[j]]];
-                    minDiff = input[j] - input[i];
-                }
-                else if(input[j] - input[i] == minDiff)
-                {
-                    diffPairs.push([input[i],input[j]]);
-                }
+    let pairs = []
+    let output = []
+    // Picks out pairs in order with a < b
+    for (i = 0; i < input.length; i++){
+        let current = input[i]
+        for (x = 0; x < input.length; x++){
+            if ((current < input[x]) && (x != i)){
+                pairs.push([current, input[x]])
             }
         }
     }
-    return diffPairs;
+    // Finds the minimum difference between pairs
+    let min = pairs[0][1] - pairs[0][0]
+    for (i = 1; i < pairs.length; i++){
+        let current = pairs[i]
+        if ((current[1] - current[0]) < min){
+            min = current[1] - current[0]
+        }
+    }
+    // Pushes minimally different pairs to output
+    for (i = 1; i < pairs.length; i++){
+        let current = pairs[i]
+        if ((current[1] - current[0]) == min){
+            output.push(current)
+        }
+    }
+    return output
 };
