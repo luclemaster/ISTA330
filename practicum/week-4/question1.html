@@ -14,8 +14,14 @@
         For each flower, you should show the image
         and under the image display its name.
     </div>
+    
     <div id='flowersDiv'>
-
+        <table>
+            <tr>
+            </tr>
+            <tr>
+            </tr>
+        </table>
     </div>
     <script>
         /*
@@ -51,6 +57,24 @@
              rose,
              waterlily
        ];
+       
+       //image add on click
+       
+       for (let i = 0; i < 4; i++)
+       {
+        let lineStr = '<td><img src="images/' + flowers[i].picture;
+        lineStr += '"><div style="text-align: center;">' + flowers[i].name;
+        lineStr += '</div></td>';
+        document.getElementsByTagName('tr')[0].innerHTML += lineStr;
+       }
+       for (let i = 4; i < 8; i++)
+       {
+        let lineStr = '<td><img src="images/' + flowers[i].picture;
+        lineStr += '"><div style="text-align: center;">' + flowers[i].name;
+        lineStr += '</div></td>';
+        document.getElementsByTagName('tr')[1].innerHTML += lineStr;
+       }
+       
     </script>
 </body>
 </html>
