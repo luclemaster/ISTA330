@@ -88,8 +88,8 @@
         }
         let daffodil = new Flower('Daffodil', 'daffodil.png');
         let cherryblossom = new Flower('Cherry blossom', 'cherryblossom.png');
-        let lily = new Flower('Lily', 'lily.png');
-        let daisy = new Flower('Daisy', 'daisy.png');
+        let lily = new Flower('Lily', 'lily.jpg');
+        let daisy = new Flower('Daisy', 'daisy.jpg');
         let sunflower = new Flower('Sunflower', 'sunflower.png');
         let tulip = new Flower('Tulip', 'tulip.png');
         let rose = new Flower('Rose', 'rose.png');
@@ -105,27 +105,66 @@
             rose,
             waterlily
         ];
-        for (let i = 0; i < 4; i++)
+        function fillImages()
+        {
+            for (let i = 0; i < 4; i++)
+            {
+                let lineStr = '<td><img src="images/' + flowers[i].picture;
+                lineStr += '"><div style="text-align: center;">' + flowers[i].name;
+                lineStr += '</div></td>';
+                document.getElementsByTagName('tr')[2].innerHTML += lineStr;
+            }
+            for (let i = 4; i < 8; i++)
+            {
+                let lineStr = '<td><img src="images/' + flowers[i].picture;
+                lineStr += '"><div style="text-align: center;">' + flowers[i].name;
+                lineStr += '</div></td>';
+                document.getElementsByTagName('tr')[3].innerHTML += lineStr;
+                
+            }
+            for(let i = 0; i < 8; i++)
+            {
+                document.getElementsByTagName('img')[i].addEventListener('click', function() {sortandrun(i);});
+            }
+        }
+        fillImages();
+       
+       function sortandrun(num)
        {
-        let lineStr = '<td><img src="images/' + flowers[i].picture;
-        lineStr += '"><div style="text-align: center;">' + flowers[i].name;
-        lineStr += '</div></td>';
-        document.getElementsByTagName('tr')[2].innerHTML += lineStr;
+           console.log("ran")
+           var pic = flowers[num];
+           console.log(pic.name);
+           sort(flowers);
+           var new_ind = flowers.findIndex(element => pic == element);
+           var beggining = flowers.slice(0,new_ind);
+           flowers = flowers.slice(new_ind, flowers.length);
+           for(let i = 0; i < beggining.length; i ++){
+               flowers.push(beggining[i]);
+           }
+           document.getElementsByTagName('tr')[2].innerHTML = "";
+           document.getElementsByTagName('tr')[3].innerHTML = "";
+           fillImages();
+           
        }
-       for (let i = 4; i < 8; i++)
+       function sort(input)
        {
-        let lineStr = '<td><img src="images/' + flowers[i].picture;
-        lineStr += '"><div style="text-align: center;">' + flowers[i].name;
-        lineStr += '</div></td>';
-        document.getElementsByTagName('tr')[3].innerHTML += lineStr;
+            let sorted = false;
+            while (sorted == false)
+            {
+                sorted = true;
+                for(let i = 0; i < input.length - 1; i++)
+                {
+                    if (input[i].name > input[i+1].name)
+                    {
+                    temp = input[i];
+                    input[i] = input[i+1];
+                    input[i+1] = temp;
+                    sorted = false;
+                    }
+                }
+            }
        }
-       /*
-       document.onclick = function() {sortandrun()};
-       function sortandrun()
-       {
-           alert(evt.target.id);
-       }
-       */
+       
     </script>
 </body>
 
